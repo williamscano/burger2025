@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuesta de Satisfacción Burger Express - Comparte tu opinión sobre nuestros productos y servicio">
+    <title>Encuesta de Satisfacción - Burger Express</title>
+    <style>
+        *{box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:#f8f9fa;margin:0;padding:20px;color:#222}.container{max-width:800px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,.1)}h1{color:#8c3500;text-align:center;margin-bottom:30px;border-bottom:2px solid #8c3500;padding-bottom:10px}h2{color:#8c3500;border-left:4px solid #8c3500;padding-left:10px;margin-top:30px}h3{color:#8c3500;font-size:1.2rem;margin-top:20px}.form-group{margin-bottom:25px}label{display:block;margin-bottom:8px;font-weight:600;color:#000}.required::after{content:" *";color:#c00}input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:12px;border:1px solid #555;border-radius:5px;font-size:16px;transition:border-color .3s}input:focus,select:focus,textarea:focus{border-color:#8c3500;outline:none;box-shadow:0 0 5px rgba(140,53,0,.5)}.rating-container{display:flex;justify-content:space-between;margin:20px 0}.rating-option{text-align:center;cursor:pointer}.rating-option input{display:none}.rating-option label{display:block;width:50px;height:50px;line-height:50px;border-radius:50%;background-color:#f1f1f1;font-size:20px;font-weight:700;cursor:pointer;transition:all .3s;color:#000}.rating-option input:checked+label{background-color:#8c3500;color:#fff;transform:scale(1.1)}.rating-option:hover label{background-color:#e1e1e1}.rating-labels{display:flex;justify-content:space-between;margin-top:5px;font-size:12px;color:#000}.form-row{display:flex;gap:20px}.form-row .form-group{flex:1}.checkbox-group{flex:1}.burger-rating{display:flex;gap:10px;margin:20px 0;flex-direction:row-reverse;justify-content:flex-end}.burger-rating input{display:none}.burger-rating label{font-size:2rem;cursor:pointer;color:#444;transition:all .2s ease}.burger-rating input:checked+label,.burger-rating input:checked~input+label{color:#8c3500}.burger-rating label:hover,.burger-rating label:hover~label{color:#8c35000}button{background-color:#8c3500;color:#fff;border:none;padding:15px 25px;font-size:16px;border-radius:5px;cursor:pointer;width:100%;font-weight:600;transition:background-color .3s;margin-top:10px}button:hover{background-color:#6a2700}.checkbox-group{flex:1;gap:10px;margin:15px 0}.checkbox-group input{margin-right:10px}.burger-icon{font-size:24px;margin-right:5px;vertical-align:middle}fieldset{border:1px solid #aaa;border-radius:5px;padding:15px;margin-bottom:20px}legend{font-weight:600;color:#8c3500;padding:0 10px}@media (max-width:600px){.form-row{flex-direction:column;gap:0}.rating-container{flex-wrap:nowrap}.rating-option{margin:5px}.burger-rating{flex-wrap:wrap;justify-content:center}}
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <h1><span class="burger-icon" aria-hidden="true">🍔</span> Encuesta de Satisfacción Burger Express</h1>
+        </div>
+    </header>
+    
+    <main role="main">
+        <div class="container">
+            <form action="#" method="post">
+                <section aria-labelledby="datos-cliente">
+                    <h2 id="datos-cliente">Datos del Cliente</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre" class="required">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos" class="required">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="required">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+                </section>
+                
+                <section aria-labelledby="evaluacion-experiencia">
+                    <h2 id="evaluacion-experiencia">Evaluación de tu Experiencia</h2>
+                    
+                    <div class="form-group">
+                        <label for="pedido" class="required">¿Qué pediste?</label>
+                        <select id="pedido" name="pedido" required>
+                            <option value="">Selecciona tu pedido...</option>
+                            <option value="clasica">Burger Clásica</option>
+                            <option value="doble">Doble Burger</option>
+                            <option value="queso">Burger Queso</option>
+                            <option value="pollo">Burger de Pollo</option>
+                            <option value="veggie">Burger Vegetariana</option>
+                            <option value="especial">Burger Especial</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    
+                    <fieldset>
+                        <legend class="required">Satisfacción general con tu burger</legend>
+                        <div class="rating-container">
+                            <div class="rating-option">
+                                <input type="radio" id="rating-1" name="satisfaccion" value="1" required>
+                                <label for="rating-1">1</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" id="rating-2" name="satisfaccion" value="2">
+                                <label for="rating-2">2</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" id="rating-3" name="satisfaccion" value="3">
+                                <label for="rating-3">3</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" id="rating-4" name="satisfaccion" value="4">
+                                <label for="rating-4">4</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" id="rating-5" name="satisfaccion" value="5">
+                                <label for="rating-5">5</label>
+                            </div>
+                        </div>
+                        <div class="rating-labels">
+                            <span>Muy insatisfecho</span>
+                            <span>Muy satisfecho</span>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group">
+                        <label for="calidad" class="required">Calidad de los ingredientes</label>
+                        <select id="calidad" name="calidad" required>
+                            <option value="">Seleccione una opción...</option>
+                            <option value="excelente">Excelente</option>
+                            <option value="buena">Buena</option>
+                            <option value="regular">Regular</option>
+                            <option value="mala">Mala</option>
+                            <option value="pésima">Pésima</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="valoracion-precio" class="required">Relación calidad-precio</label>
+                        <select id="valoracion-precio" name="valoracion-precio" required>
+                            <option value="">Seleccione una opción...</option>
+                            <option value="excelente">Excelente relación</option>
+                            <option value="buena">Buena relación</option>
+                            <option value="aceptable">Aceptable</option>
+                            <option value="mala">Mala relación</option>
+                            <option value="pésima">Pésima relación</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios sobre tu burger</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="¿Qué te gustó o no te gustó de tu burger? ¿Alguna sugerencia de mejora?"></textarea>
+                    </div>
+                </section>
+                
+                <section aria-labelledby="evaluacion-servicio">
+                    <h2 id="evaluacion-servicio">Evaluación del Servicio</h2>
+                    
+                    <fieldset>
+                        <legend class="required">¿Cómo calificarías nuestro servicio?</legend>
+                        <div class="burger-rating">
+                            <input type="radio" id="servicio-5" name="servicio" value="5" required>
+                            <label for="servicio-5">🍔</label>
+                            
+                            <input type="radio" id="servicio-4" name="servicio" value="4">
+                            <label for="servicio-4">🍔</label>
+                            
+                            <input type="radio" id="servicio-3" name="servicio" value="3">
+                            <label for="servicio-3">🍔</label>
+                            
+                            <input type="radio" id="servicio-2" name="servicio" value="2">
+                            <label for="servicio-2">🍔</label>
+                            
+                            <input type="radio" id="servicio-1" name="servicio" value="1">
+                            <label for="servicio-1">🍔</label>
+                        </div>
+                        <div class="rating-labels">
+                            <span>Pésimo</span>
+                            <span>Excelente</span>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group">
+                        <label for="tiempo">Tiempo de espera</label>
+                        <select id="tiempo" name="tiempo">
+                            <option value="">Seleccione una opción...</option>
+                            <option value="muy_rapido">Muy rápido</option>
+                            <option value="adecuado">Adecuado</option>
+                            <option value="un_poco_lento">Un poco lento</option>
+                            <option value="muy_lento">Muy lento</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contacto">
+                            <input type="checkbox" id="contacto" name="contacto" value="si"> 
+                            <span>Quiero recibir promociones y novedades de Burger Express</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="privacidad">
+                            <input type="checkbox" id="privacidad" name="privacidad" required> 
+                            <span class="required">Acepto la política de privacidad y el tratamiento de mis datos</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Enviar Encuesta</button>
+                </section>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
